@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form Styling</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        /* 
+        -May want to add "border-box for "box-sizing so padding does not affect width
+        -Reset margin and padding 
+       */
+        box-sizing: border-box;
+        margin: 0;
+        font-family: "Raleway", "sans-serif";
+      }
+
+      body {
+        /* 
+          -Background color is #344a72
+        */
+        background-color: #344a72;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem;
+      }
+
+      a {
+        /* 
+        Underlined links are ugly :)
+       */
+        text-decoration: none;
+      }
+
+      #container {
+        /* 
+        -Remember, margin: auto on left and right will center a block element 
+        -I would also set a "max-width" for responsiveness
+        -May want to add some padding
+        */
+        display: block;
+        margin: auto;
+        max-width: 23rem;
+        height: 25rem;
+      }
+
+      .form-wrap {
+        /* 
+          This is the white area around the form and heading, etc
+        */
+        display: block;
+        background-color: rgb(250, 250, 250);
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+      }
+
+      .form-wrap h1,
+      .form-wrap p {
+        /* 
+          May want to center these
+        */
+        text-align: center;
+      }
+
+      .form-wrap .form-group {
+        /* 
+          Each label, input is wrapped in .form-group
+        */
+        text-align: center;
+        padding-left: 20px;
+      }
+
+      .form-wrap .form-group label {
+        /* 
+          Label should be turned into a block element
+        */
+        display: block;
+        text-align: left;
+      }
+      input {
+        border: 1px solid rgb(0, 0, 0);
+        width: 92%;
+        padding: 10px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        margin-right: 35px;
+        border-radius: 3px;
+      }
+
+      .form-wrap .form-group input {
+        /* 
+          Inputs should reach accross the .form-wrap 100% and have some padding
+        */
+        padding-left: 10px;
+      }
+
+      .form-wrap button {
+        /* 
+          Button should wrap accross 100% and display as block
+          Background color for button is #49c1a2
+        */
+        text-align: center;
+        border: none;
+        display: block;
+        background-color: #49c1a2;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        border-style: none;
+        height: 30px;
+        display: block;
+        width: 325px;
+        cursor: pointer;
+        margin: auto;
+      }
+      .form-wrap button:hover {
+        /* 
+          Hover background color for button is #37a08e
+        */
+        color: #37a08e;
+      }
+
+      .form-wrap .bottom-text {
+        /* 
+          Bottom text is smaller
+        */
+        font-size: 0.85rem;
+        margin: 1.5rem 0 0 0;
+      }
+
+      footer {
+        /* 
+        Should be centered
+       */
+        width: 100;
+        padding:0px 40px 0px 40px;
+        margin: auto;
+        color: #ffff;
+        font-weight: bold;
+        text-align: center;
+        display: inline-block;
+      }
+
+      footer a {
+        /* 
+          Footer link color is #49c1a2
+        */
+        padding: 0.8em 0 0 0;
+        color: #49c1a2;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-wrap">
+        <h1>Sign Up</h1>
+        <p>It's free and only takes a minute</p>
+        <form>
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" name="firstName" id="first-name" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="lastName" id="last-name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+          </div>
+          <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input type="password" name="pasword2" id="password2" />
+          </div>
+          <button type="submit" class="btn">Sign Up</button>
+          <p class="bottom-text">
+            By clicking the Sign Up button, you agree to our
+            <a href="#">Terms & Conditions</a> and
+            <a href="#">Privacy Policy</a>
+          </p>
+        </form>
+      </div>
+      <footer>
+        <p>Already have an account? <a href="#">Login Here</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
